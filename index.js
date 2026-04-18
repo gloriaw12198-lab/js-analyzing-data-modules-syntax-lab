@@ -1,7 +1,8 @@
 function combineUsers(...arrays) {
-  const users = [].concat(...arrays); 
+  const users = [].concat(...arrays);
 
-  const merge_date = new Date().toISOString().split("T")[0];
+  const today = new Date();
+  const merge_date = `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`;
 
   return {
     users,
